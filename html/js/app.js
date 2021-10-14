@@ -1,6 +1,6 @@
 'use strict';
 
-var CITY_QUERY_URL_PREFIX = 'http://localhost:3000/city?name=ilike.'
+var CITY_QUERY_URL_PREFIX = 'http://'+document.location.host+':3000/city?name=ilike.'
 
 var app = {};
 
