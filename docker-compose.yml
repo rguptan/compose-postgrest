@@ -64,14 +64,14 @@ services:
     image: sosedoff/pgweb
     container_name: pgweb
     ports:
-      - "9080:80"
+      - "8081:8081"
     depends_on:
       - postgrest-db
     networks:
       - postgrest-backend
     restart: always
     environment:
-      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgrest-db:5432/${POSTGRES_DB}
+      - DATABASE_URL=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgrest-db:5432/${POSTGRES_DB}?sslmode=disable
 
 networks:
   postgrest-backend:
